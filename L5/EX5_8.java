@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class EX5_8 {
 	public static void main(String[] Strings) {
-		// USE CASE METHOD !!!
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter operator (+ - / *):");
 		String op = input.nextLine();
