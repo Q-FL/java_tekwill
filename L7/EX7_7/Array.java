@@ -1,5 +1,9 @@
+import java.util.Arrays;
 public class Array {
 	int items[] = {4,2,3,6,9};
+	void itemsInfo() {
+		System.out.println("Items in array: " + Arrays.toString(items));
+	}
 	void sum(){
 		int vSum = 0;
 		for (int oneD = 0; oneD < items.length; oneD++) {
