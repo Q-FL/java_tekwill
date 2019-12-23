@@ -4,10 +4,7 @@ public class EX10_6 {
 		isMultipleSeries(20,4,10,3,45,3);
 	}
 	static boolean isMultiple(int base,int multiple) {
-		if (base % multiple == 0)
-			return true;
-		else
-			return false;
+		return base % multiple == 0;
 	}
 	static void isMultipleSeries(int...series) {
 		if (series.length % 2 == 0) {
