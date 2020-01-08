@@ -135,4 +135,18 @@ public class UserDataBase{
 			e.printStackTrace();
 		}
 	}
+	public boolean userExist(String userName) {
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new FileReader(fileName));
+			String line;
+			boolean flag = true;
+			while ((line = br.readLine()) != null) {
+				if (line.contains(userName) && line.substring(0,line.indexOf("^")).length() == userName.length())
+					return true;	
+			}
+			br.close();
+		}catch (Exception e){System.out.println("Gotcha bitch, you have an error !");}
+		return false;
+	}
 }
