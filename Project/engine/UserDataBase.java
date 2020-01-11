@@ -35,9 +35,7 @@ public class UserDataBase{
 			br.close();
 			bw.close();
 		}
-		catch (Exception e) {
-			System.out.println("Gotcha bitch, you are wrooong !");
-		}
+		catch (Exception e) {}
 		File oldFile = new File(fileName);
 		oldFile.delete();
 		File newFile = new File(tmpFileName);
@@ -64,9 +62,7 @@ public class UserDataBase{
 			br.close();
 			bw.close();
 		}
-		catch (Exception e) {
-			System.out.println("Gotcha bitch, you are wrooong !");
-		}
+		catch (Exception e) {}
 		File oldFile = new File(fileName);
 		oldFile.delete();
 		File newFile = new File(tmpFileName);
@@ -92,9 +88,7 @@ public class UserDataBase{
 			br.close();
 			bw.close();
 		}
-		catch (Exception e) {
-			System.out.println("Gotcha bitch, you are wrooong !");
-		}
+		catch (Exception e) {}
 		File oldFile = new File(fileName);
 		oldFile.delete();
 		File newFile = new File(tmpFileName);
@@ -116,9 +110,7 @@ public class UserDataBase{
 				System.out.println("User '" + userName + "' does not exist !");
 			br.close();
 		}
-		catch (Exception e) {
-			System.out.println("Gotcha bitch, you have an error !");
-		}
+		catch (Exception e) {}
 	}
 	public void getAllUsersInfo(){
 		BufferedReader br = null;
@@ -130,10 +122,7 @@ public class UserDataBase{
 					System.out.println("User: " + line.substring(0,line.indexOf("^")) + " | Score: " + line.substring(line.indexOf("^")+1));	
 			br.close();
 		}
-		catch (Exception e) {
-			System.out.println("Gotcha bitch, you have an error !");
-			e.printStackTrace();
-		}
+		catch (Exception e) {}
 	}
 	public boolean userExist(String userName) {
 		BufferedReader br = null;
@@ -142,11 +131,13 @@ public class UserDataBase{
 			String line;
 			boolean flag = true;
 			while ((line = br.readLine()) != null) {
-				if (line.contains(userName) && line.substring(0,line.indexOf("^")).length() == userName.length())
-					return true;	
+				if (line.contains(userName) && line.substring(0,line.indexOf("^")).length() == userName.length()){
+					br.close();
+					return true;
+				}
 			}
 			br.close();
-		}catch (Exception e){System.out.println("Gotcha bitch, you have an error !");}
+		}catch (Exception e) {}
 		return false;
 	}
 }
