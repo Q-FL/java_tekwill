@@ -9,10 +9,26 @@ public class UserDataBase{
 
 	private String fileName = "UserDataBase.txt";
 
-	UserDataBase(){}
+	UserDataBase(){
+		File initDataBase = new File(this.fileName);
+		if (initDataBase.exists()) {}
+		else {
+			try {
+				initDataBase.createNewFile();
+			}
+			catch (Exception e) {}
+		}
+	}
 	UserDataBase(String newFileName){
 		this.fileName = newFileName+".txt";
-		File createFile = new File(fileName);
+		File newDataBase = new File(fileName);
+		if (newDataBase.exists()) {}
+		else {
+			try {
+				newDataBase.createNewFile();
+			}
+			catch (Exception e) {}
+		}
 	}
 	public void addNewUser(String name){
 		BufferedReader br = null;

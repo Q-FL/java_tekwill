@@ -15,7 +15,7 @@ public class Main {
 		cls();
 		if (udb.userExist(userName)) {
 			cls();
-			System.out.println("\nWelcome Back " + userName);
+			System.out.println("\nWelcome Back " + userName + " ^.^");
 			slp(2);
 			questionApp(udb,userName);
 		}

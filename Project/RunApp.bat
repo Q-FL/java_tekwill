@@ -1,0 +1,2 @@
+cd Quizer
+java Main
