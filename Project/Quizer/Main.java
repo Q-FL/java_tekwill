@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.ArrayList;
 
-public class Quizer {
+public class Main {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		UserDataBase udb = new UserDataBase();
@@ -23,7 +23,7 @@ public class Quizer {
 			cls();
 			udb.addNewUser(userName);
 			System.out.println("\nWelcome " + userName);
-			System.out.println("\n- So basicaly, chose the letter with the right answer.\n- You don't have a second chance in case of wrong answer.\n- Also there are 'fifty / ask / phone' options to help you.");
+			System.out.println("\n- So basicaly, choose the letter with the right answer.\n- You don't have a second chance in case of wrong answer.\n- Also there are 'fifty / ask / phone' options to help you.");
 			slp(10);
 			System.out.println("\nGood Luck ^.^");
 			slp(2);
@@ -58,7 +58,7 @@ public class Quizer {
 						+"\n \n|Don't forget about 'fifty / ask / phone' options.|\n"
 						);
 
-					System.out.print("Chose the right answer: ");
+					System.out.print("Choose the right answer: ");
 					String userChoice = input.nextLine();
 					userChoice = userChoice.toUpperCase();
 					

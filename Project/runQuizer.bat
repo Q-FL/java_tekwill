@@ -1,2 +1,0 @@
-cd engine
-java Quizer
