@@ -1,3 +1,4 @@
+import java.util.function.Predicate;
 public class EX18_2 {
 	public static void main(String[] args) {
 		StringValidator containsString = i -> i.contains("knowledge");
@@ -9,10 +10,10 @@ public class EX18_2 {
 		System.out.println(notNullString.validate(null));
 		System.out.println(notEmptySpacesString.validate(" "));
 
-		PredicateValidator<String> containsStringP = i -> i.contains("knowledge");
-		PredicateValidator<String> lengthStringP = i -> i.length() > 10;
-		PredicateValidator<String> notNullStringP = i -> i != null;
-		PredicateValidator<String> notEmptySpacesStringP = i -> !i.contains(" ");
+		Predicate<String> containsStringP = i -> i.contains("knowledge");
+		Predicate<String> lengthStringP = i -> i.length() > 10;
+		Predicate<String> notNullStringP = i -> i != null;
+		Predicate<String> notEmptySpacesStringP = i -> !i.contains(" ");
 		System.out.println(containsStringP.test("knowledge"));
 		System.out.println(lengthStringP.test("12345678910"));
 		System.out.println(notNullStringP.test(null));
