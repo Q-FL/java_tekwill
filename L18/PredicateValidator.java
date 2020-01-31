@@ -1,4 +1,4 @@
 @FunctionalInterface
-public interface PredicateValidator<Double> {
-	boolean test(double t);
+public interface PredicateValidator<T> {
+	boolean test(T t);
 }

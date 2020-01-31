@@ -9,10 +9,10 @@ public class EX18_2 {
 		System.out.println(notNullString.validate(null));
 		System.out.println(notEmptySpacesString.validate(" "));
 
-		StringPredicateValidator<String> containsStringP = i -> i.contains("knowledge");
-		StringPredicateValidator<String> lengthStringP = i -> i.length() > 10;
-		StringPredicateValidator<String> notNullStringP = i -> i != null;
-		StringPredicateValidator<String> notEmptySpacesStringP = i -> !i.contains(" ");
+		PredicateValidator<String> containsStringP = i -> i.contains("knowledge");
+		PredicateValidator<String> lengthStringP = i -> i.length() > 10;
+		PredicateValidator<String> notNullStringP = i -> i != null;
+		PredicateValidator<String> notEmptySpacesStringP = i -> !i.contains(" ");
 		System.out.println(containsStringP.test("knowledge"));
 		System.out.println(lengthStringP.test("12345678910"));
 		System.out.println(notNullStringP.test(null));
